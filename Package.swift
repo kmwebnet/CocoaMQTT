@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.2
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -6,9 +6,9 @@ import PackageDescription
 let package = Package(
     name: "CocoaMQTT",
     platforms: [
-        .macOS(.v10_15),
-        .iOS(.v13),
-        .tvOS(.v13)
+        .macOS(.v10_13),
+        .iOS(.v12),
+        .tvOS(.v10)
     ],
     products: [
         .library(name: "CocoaMQTT", targets: [ "CocoaMQTT" ]),
