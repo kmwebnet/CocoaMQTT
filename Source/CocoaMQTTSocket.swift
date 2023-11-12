@@ -89,6 +89,7 @@ extension CocoaMQTTSocket: CocoaMQTTSocketProtocol {
                 sec_protocol_options_set_verify_block(securityOptions, { (_, trust, completionHandler) in
                     completionHandler(true)
                 }, .main)
+                sec_protocol_options_append_tls_ciphersuite(securityOptions, tls_ciphersuite_t(rawValue: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256)!)
             }
          
             if let clientIdentity = getClientCertificate() {
